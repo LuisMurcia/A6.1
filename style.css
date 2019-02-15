@@ -9,6 +9,9 @@ h1, h2, h3, h4, h5, h6 {
 nav img{
 	width: 110px;
 }
+.navbar-toggler:focus{
+	outline: none;
+}
 .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-toggler, .navbar-light .navbar-nav .nav-link:focus{
 	color: #fc1e2a;
 }
