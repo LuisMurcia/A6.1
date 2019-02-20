@@ -18,3 +18,10 @@ nav img{
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-toggler:hover{
 	color: #cc0000;
 }
+.btn-danger{
+	border: #cc0000;
+	background-color: #cc0000;
+}
+.btn-danger:hover, .btn-danger:focus{
+	background-color: black;
+}
