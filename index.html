@@ -9,10 +9,6 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="js.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
@@ -25,13 +21,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <h6><a class="nav-link js-scroll-trigger" href="#about">About</a></h6>
+            <h6><a class="nav-link js-scroll-trigger" href="#categories"> Categories </a></h6>
           </li>
           <li class="nav-item">
-            <h6><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></h6>
+            <h6><a class="nav-link js-scroll-trigger" href="#most"> Most Popular </a></h6>
           </li>
           <li class="nav-item">
-            <h6><a class="nav-link js-scroll-trigger" href="#signup">Contact</a></h6>
+            <h6><a class="nav-link js-scroll-trigger" href="list.html"> List <i class="fa fa-star"></i></a></h6>
           </li>
         </ul>
       </div>
@@ -39,156 +35,515 @@
   </nav>  
 
   <div class="text-center mt-4 text-white mb-2">
-    <h2 class="text-center pb-2">Categories</h2>
-    <button data-target="#myCarousel" data-slide-to="0" class="btn btn-danger mr-3 " id="btnPrev">Thriller</button>
-     
-    <button data-target="#myCarousel" data-slide-to="1" class="btn btn-danger mr-3" id="btnPause">Action</button> 
-     
-    <button data-target="#myCarousel" data-slide-to="2" class="btn btn-danger mr-3" id="btnNext">Terror</button>
+    <h2 class="text-center pb-3" id="categories">Categories</h2>
+    <badge class="mr-md-5 mr-3 py-2 px-md-5 px-sm-3 px-2" id="thriller">Thriller</badge>
+    <badge class="mr-md-5 mr-3 py-2 px-md-5 px-sm-3 px-2" id="drama">Drama</badge> 
+    <badge class="mr-md-5 mr-3 py-2 px-md-5 px-sm-3 px-2" id="terror">Terror</badge>
   </div>
-  <div id="myCarousel" class="carousel slide pt-2 px-5 pb-5" data-ride="carousel" data-interval="0">
-      <!-- Wrapper for carousel items -->
+  <div id="myCarousel" class="carousel slide pt-2 px-5 pb-5" data-ride="carousel">
       <div class="carousel-inner">
-        <div class="item carousel-item">
+        <div class="item carousel-item active" id="thrillerC">
           <div class="row">
-            <div class="col-sm-3">
+            <div class="col-lg-3">
               <div class="thumb-wrapper">
                 <div class="img-box">
-                  <img src="img/dark.jpg" class="img-responsive img-fluid" alt="">
+                  <a data-toggle="modal" data-target="#darkT"><img src="img/dark.jpg" class="img-responsive img-fluid" alt=""></a>
                 </div>
                 <div class="thumb-content text-center p-3">
-                  <a href="#" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+                  <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
                 </div>            
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-lg-3">
               <div class="thumb-wrapper">
                 <div class="img-box">
-                  <img src="img/dark.jpg" class="img-responsive img-fluid" alt="">
+                  <a data-toggle="modal" data-target="#strangerT"><img src="img/stranger.jpg" class="img-responsive img-fluid" alt=""></a>
                 </div>
                 <div class="thumb-content text-center p-3">
-                  <a href="#" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+                  <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
                 </div>          
               </div>
             </div>    
-            <div class="col-sm-3">
+            <div class="col-lg-3">
               <div class="thumb-wrapper">
                 <div class="img-box">
-                  <img src="img/dark.jpg" class="img-responsive img-fluid" alt="">
+                  <a data-toggle="modal" data-target="#deathnoteT"><img src="img/deathnote.jpg" class="img-responsive img-fluid" alt=""></a>
                 </div>
                 <div class="thumb-content text-center p-3">
-                  <a href="#" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+                  <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
                 </div>            
               </div>
             </div>                
-            <div class="col-sm-3">
+            <div class="col-lg-3">
               <div class="thumb-wrapper">
                 <div class="img-box">
-                  <img src="img/dark.jpg" class="img-responsive img-fluid" alt="">
+                  <a data-toggle="modal" data-target="#narcosT"><img src="img/narcos.jpg" class="img-responsive img-fluid" alt=""></a>
                 </div>
                 <div class="thumb-content text-center p-3">
-                  <a href="#" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+                  <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
                 </div>            
               </div>
             </div>
           </div>
         </div>
-        <div class="item carousel-item">
+        <div class="item carousel-item" id="dramaC">
           <div class="row">
-            <div class="col-sm-3">
+            <div class="col-lg-3">
               <div class="thumb-wrapper">
                 <div class="img-box">
-                  <img src="img/dark.jpg" class="img-responsive img-fluid" alt="">
+                  <a data-toggle="modal" data-target="#soaT"><img src="img/soa.jpg" class="img-responsive img-fluid" alt=""></a>
                 </div>
                 <div class="thumb-content text-center p-3">
-                  <a href="#" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+                  <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
                 </div>             
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-lg-3">
               <div class="thumb-wrapper">
                 <div class="img-box">
-                  <img src="img/dark.jpg" class="img-responsive img-fluid" alt="">
+                  <a data-toggle="modal" data-target="#breakingbadT"><img src="img/breakingbad.jpg" class="img-responsive img-fluid" alt=""></a>
                 </div>
                 <div class="thumb-content text-center p-3">
-                  <a href="#" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+                  <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
                 </div>            
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-lg-3">
               <div class="thumb-wrapper">
                 <div class="img-box">
-                  <img src="img/dark.jpg" class="img-responsive img-fluid" alt="">
+                  <a data-toggle="modal" data-target="#peakyT"><img src="img/peaky.jpg" class="img-responsive img-fluid" alt=""></a>
                 </div>
                 <div class="thumb-content text-center p-3">
-                  <a href="#" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+                  <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
                 </div>             
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-lg-3">
               <div class="thumb-wrapper">
                 <div class="img-box">
-                  <img src="img/dark.jpg" class="img-responsive img-fluid" alt="">
+                  <a data-toggle="modal" data-target="#theendofT"><img src="img/theendof.jpg" class="img-responsive img-fluid" alt=""></a>
                 </div>
                 <div class="thumb-content text-center p-3">
-                  <a href="#" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+                  <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
                 </div>            
               </div>
             </div>            
           </div>
         </div>
-        <div class="item carousel-item active">
+        <div class="item carousel-item" id="terrorC">
           <div class="row">
-            <div class="col-sm-3">
+            <div class="col-lg-3">
               <div class="thumb-wrapper">
                 <div class="img-box">
-                  <img src="img/dark.jpg" class="img-responsive img-fluid" alt="">
+                  <a data-toggle="modal" data-target="#hillhouseT"><img src="img/hillhouse.jpg" class="img-responsive img-fluid" alt=""></a>
                 </div>
                 <div class="thumb-content text-center p-3">
-                  <a href="#" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+                  <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
                 </div>           
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-lg-3">
               <div class="thumb-wrapper">
                 <div class="img-box">
-                  <img src="img/dark.jpg" class="img-responsive img-fluid" alt="">
+                  <a data-toggle="modal" data-target="#twdT"><img src="img/twd.jpg" class="img-responsive img-fluid" alt=""></a>
                 </div>
                 <div class="thumb-content text-center p-3">
-                  <a href="#" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+                  <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
                 </div>          
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-lg-3">
               <div class="thumb-wrapper">
                 <div class="img-box">
-                  <img src="img/dark.jpg" class="img-responsive img-fluid" alt="">
+                  <a data-toggle="modal" data-target="#americanhorrorT"><img src="img/americanhorror.jpg" class="img-responsive img-fluid" alt=""></a>
                 </div>
                 <div class="thumb-content text-center p-3">
-                  <a href="#" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+                  <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
                 </div>            
               </div>
             </div>  
-            <div class="col-sm-3">
+            <div class="col-lg-3">
               <div class="thumb-wrapper">
                 <div class="img-box">
-                  <img src="img/dark.jpg" class="img-responsive img-fluid" alt="">
+                  <a data-toggle="modal" data-target="#slasherT"><img src="img/slasher.jpg" class="img-responsive img-fluid" alt=""></a>
                 </div>
                 <div class="thumb-content text-center p-3">
-                  <a href="#" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+                  <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
                 </div>            
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Carousel controls -->
       <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
         <i class="fa fa-angle-left"></i>
       </a>
       <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
         <i class="fa fa-angle-right"></i>
       </a>
+  </div>
+
+  <h2 class="text-center text-white pb-3" id="most">Most Popular</h2>
+  <div class="row justify-content-center no-gutters">
+    <div class="col-lg-6">
+      <a href="serie.html">
+        <img class="img-fluid" width="100%" src="img/hillhouse2.jpg">
+      </a>
     </div>
+    <div class="col-lg-6">
+      <div class="text-center h-100 project">
+        <div class="d-flex h-100">
+          <div class="project-text w-100 my-auto text-center text-lg-left">
+            <h4><a href="serie.html">The Haunting of Hill House</a></h4>
+            <p class="mb-0 text-white-50">Lorem ipsum dolor sit amet consectetur adipiscing elit, taciti et egestas fringilla donec. Habitasse ut metus!</p>
+            <hr class="d-none d-lg-block mb-0 ml-0">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center no-gutters">
+      <div class="col-lg-6">
+        <a href="#">
+          <img class="img-fluid" width="100%" src="img/vikings.jpg">
+        </a>
+      </div>
+      <div class="col-lg-6 order-lg-first">
+        <div class="text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-right">
+              <h4><a href="#">Vikings</a></h4>
+              <p class="mb-0 text-white-50">Dis urna condimentum sociosqu leo pellentesque class in ridiculus, fermentum! Nostra habitasse purus magna sociosqu urna per.</p>
+              <hr class="d-none d-lg-block mb-0 mr-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center no-gutters">
+      <div class="col-lg-6">
+        <a href="#">
+          <img class="img-fluid" width="100%" src="img/soa2.jpg">
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <div class="text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-left">
+              <h4><a href="#">Sons of Anarchy</a></h4>
+              <p class="mb-0 text-white-50">Lorem ipsum dolor sit amet consectetur adipiscing elit, taciti et egestas fringilla donec. Habitasse ut metus magnis gravida hendrerit interdum semper aliquet imperdiet, primis faucibus pharetra nibh ac convallis magna nascetur!</p>
+              <hr class="d-none d-lg-block mb-0 ml-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center no-gutters">
+      <div class="col-lg-6">
+        <a href="#">
+          <img class="img-fluid" width="100%" src="img/stranger2.jpg">
+        </a>
+      </div>
+      <div class="col-lg-6 order-lg-first">
+        <div class="text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-right">
+              <h4><a href="#">Stranger Things</a></h4>
+              <p class="mb-0 text-white-50">Nam volutpat duis non per natoque eu phasellus potenti condimentum blandit, aliquam nullam purus nisi lacinia taciti habitant maecenas ullamcorper.</p>
+              <hr class="d-none d-lg-block mb-0 mr-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="row justify-content-center no-gutters">
+      <div class="col-lg-6">
+        <a href="#">
+          <img class="img-fluid" width="100%" src="img/dark2.jpg">
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <div class="text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-left">
+              <h4><a href="#">Dark</a></h4>
+              <p class="mb-0 text-white-50">Lorem ipsum dolor sit amet consectetur adipiscing elit! Dignissim turpis diam potenti vehicula sociosqu.</p>
+              <hr class="d-none d-lg-block mb-0 ml-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center no-gutters">
+      <div class="col-lg-6">
+        <a href="#">
+          <img class="img-fluid" width="100%" src="img/familyguy.jpg">
+        </a>
+      </div>
+      <div class="col-lg-6 order-lg-first">
+        <div class="text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-right">
+              <h4><a href="#">Family Guy</a></h4>
+              <p class="mb-0 text-white-50">Lorem ipsum dolor sit amet consectetur adipiscing elit, taciti et egestas fringilla donec. Habitasse ut metus magnis gravida hendrerit interdum semper aliquet imperdiet.</p>
+              <hr class="d-none d-lg-block mb-0 mr-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer text-center text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">Around the Web</h4>
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-google-plus-g"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-dribbble"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h4 class="text-uppercase mb-4">About Netflix</h4>
+            <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit, taciti et egestas fringilla donec nam volutpat duis non.
+              <a href="#">Here we are!</a>.</p>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  <div class="modal" id="darkT">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h4 class="modal-title text-secondary">Trailer</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body pb-0">
+          <iframe width="100%" height="280" src="https://www.youtube.com/embed/IJ_AZCvCacw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="strangerT">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h4 class="modal-title text-secondary">Trailer</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body pb-0">
+          <iframe width="100%" height="280" src="https://www.youtube.com/embed/b9EkMc79ZSU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="deathnoteT">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h4 class="modal-title text-secondary">Trailer</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body pb-0">
+          <iframe width="100%" height="280" src="https://www.youtube.com/embed/UiJ0aSqEX7I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="narcosT">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h4 class="modal-title text-secondary">Trailer</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body pb-0">
+          <iframe width="100%" height="280" src="https://www.youtube.com/embed/FJ7B3qbj-5s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="soaT">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h4 class="modal-title text-secondary">Trailer</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body pb-0">
+          <iframe width="100%" height="280" src="https://www.youtube.com/embed/ia4cggzpqYQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="breakingbadT">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h4 class="modal-title text-secondary">Trailer</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body pb-0">
+          <iframe width="100%" height="280" src="https://www.youtube.com/embed/HhesaQXLuRY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="peakyT">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h4 class="modal-title text-secondary">Trailer</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body pb-0">
+          <iframe width="100%" height="280" src="https://www.youtube.com/embed/zxRwTERrAeM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="theendofT">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h4 class="modal-title text-secondary">Trailer</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body pb-0">
+          <iframe width="100%" height="280" src="https://www.youtube.com/embed/aV-y3bvYFYA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="hillhouseT">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h4 class="modal-title text-secondary">Trailer</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body pb-0">
+          <iframe width="100%" height="280" src="https://www.youtube.com/embed/mTvNeafShH0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="twdT">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h4 class="modal-title text-secondary">Trailer</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body pb-0">
+          <iframe width="100%" height="280" src="https://www.youtube.com/embed/sfAc2U20uyg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="americanhorrorT">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h4 class="modal-title text-secondary">Trailer</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body pb-0">
+          <iframe width="100%" height="280" src="https://www.youtube.com/embed/4w9i4Wxsxi0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="modal" id="slasherT">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h4 class="modal-title text-secondary">Trailer</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body pb-0">
+          <iframe width="100%" height="280" src="https://www.youtube.com/embed/Qp600g9OeUw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="list.html" class="btn btn-danger"><i class="fas fa-plus"></i><b>&nbsp&nbsp&nbsp&nbspMy list</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js.js"></script>
 </body>
 </html>
