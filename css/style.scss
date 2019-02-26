@@ -1,0 +1,307 @@
+/***** 1 - VARIABLES *****/
+
+$primaryColor: #cc0000;
+$secondColor: black;
+$basicTransition: all ease 1s;
+
+/***** 2 - MIXINS *****/
+
+@mixin mix1($property) {
+  filter: $property;
+}
+@mixin mix2($property) {
+  background-color: $property;
+}
+
+/***** 3 - INHERITANCE *****/
+%links {
+  color: $primaryColor;
+  text-decoration: none;
+}
+
+/***** 4 - IMPORT *****/
+
+@import 'media';
+
+
+body {
+  font-family: 'Lato';
+  background-image: url(img/fondo.jpg);
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: 'Montserrat';
+}
+
+a, footer a:hover {
+  color: white;
+}
+
+a {
+  &:focus, &:hover, &:active {
+    @extend %links;
+  }
+}
+
+nav img {
+  width: 110px;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-light {
+  .navbar-nav .nav-link, .navbar-toggler {
+    color: #fc1e2a;
+  }
+  .navbar-nav .nav-link {
+    &:focus {
+      color: #fc1e2a;
+    }
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+  .navbar-toggler:hover {
+    color: $primaryColor;
+  }
+}
+
+.no-gutters a:hover {
+  color: $primaryColor;
+}
+
+footer {
+  a {
+    color: $primaryColor;
+  }
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#drama, #terror {
+  border-radius: 5px;
+  background-color: $primaryColor;
+  cursor: pointer;
+}
+
+#thriller {
+  border-radius: 5px;
+  background-color: $secondColor;
+  cursor: pointer;
+}
+
+.text-primary {
+  color: $primaryColor !important;
+}
+
+.btn-danger {
+  border: $primaryColor !important;
+  background-color: $primaryColor !important;
+  &:hover, &:focus {
+    background-color: $secondColor !important;
+  }
+}
+
+#myCarousel {
+  a {
+    cursor: pointer;
+  }
+  img {
+    width: 100%;
+    height: 407px;
+    transition: 0.8s all ease;
+    &:hover {
+      @include mix1(brightness(1.2));
+    }
+  }
+}
+
+table img:hover, .card img:hover {
+  @include mix1(brightness(1.2));
+}
+
+.carousel-control {
+  transition: 0.4s all ease;
+  height: 79.5%;
+  &:hover {
+    @include mix2(rgba(0, 0, 0, 0.3));
+  }
+}
+
+.no-gutters {
+  img:hover {
+    filter: grayscale(100%);
+    transition: $basicTransition;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  hr {
+    background-color: $primaryColor;
+  }
+}
+
+.project {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.project-text {
+  padding: 5rem;
+  hr {
+    border-width: .25rem;
+    width: 30%;
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 5% 30% 30% 30% 5%;
+  grid-template-rows: 100px 620px auto auto auto 1fr 1fr 1fr 1fr;
+}
+
+.navbar {
+  grid-area: 1/1/2/6;
+}
+
+#opacidad {
+  grid-area: 1/1/3/6;
+  background-color: rgba(11, 11, 11, 0.75);
+}
+
+#fondo {
+  grid-area: 1/2/3/5;
+  background-image: url(https://occ-0-2962-360.1.nflxso.net/art/b1d2f/75243f7a223607ebacbd4842949856432deb1d2f.jpg);
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+#opacidad img {
+  width: 550px;
+  padding: 100px;
+}
+
+.principal {
+  grid-area: 2/2/3/5;
+  iframe {
+    margin-top: 100px;
+  }
+}
+
+#info {
+  grid-area: 3/2/4/4;
+  background-image: linear-gradient(to top, #181818 0, rgba(24, 24, 24, 0) 100%);
+  span {
+    color: #a3a3a3;
+  }
+}
+
+#right span, #apartado span, #cap1 span, #cap2 span, #cap3 span, #cap4 span, #cap5 span, #cap6 span, #cap7 span, #cap8 span, #cap9 span, #cap10 span {
+  color: #a3a3a3;
+}
+
+#right {
+  grid-area: 3/4/4/5;
+  background-image: linear-gradient(to top, #181818 0, rgba(24, 24, 24, 0) 100%);
+}
+
+#fondo2 {
+  grid-area: 4/2/10/5;
+  background-color: #181818;
+}
+
+#apartado {
+  grid-area: 4/2/5/5;
+  hr {
+    background-color: grey;
+  }
+}
+
+#apartado2 {
+  grid-area: 5/2/6/5;
+}
+
+#cap1 img, #cap2 img, #cap3 img, #cap4 img, #cap5 img, #cap6 img, #cap7 img, #cap8 img, #cap9 img, #cap10 img {
+  width: 350px;
+}
+
+#cap1 span, #cap2 span, #cap3 span, #cap4 span, #cap5 span, #cap6 span, #cap7 span, #cap8 span, #cap9 span, #cap10 span {
+  font-size: 13px;
+}
+
+#cap1 {
+  grid-area: 6/2/7/3;
+}
+
+#cap2 {
+  grid-area: 6/3/7/4;
+}
+
+#cap3 {
+  grid-area: 6/4/7/5;
+}
+
+#cap4 {
+  grid-area: 7/2/8/3;
+}
+
+#cap5 {
+  grid-area: 7/3/8/4;
+}
+
+#cap6 {
+  grid-area: 7/4/8/5;
+}
+
+#cap7 {
+  grid-area: 8/2/9/3;
+}
+
+#cap8 {
+  grid-area: 8/3/9/4;
+}
+
+#cap9 {
+  grid-area: 8/4/9/5;
+}
+
+#cap10 {
+  grid-area: 9/2/10/3;
+}
+
+table img {
+  width: 220px;
+  transition: $basicTransition;
+}
+
+.table {
+  td, th {
+    border: 0;
+  }
+}
+
+.rating-stars ul {
+  list-style-type: none;
+  padding: 0;
+  > li.star {
+    display: inline-block;
+    > i.fa {
+      font-size: 2em;
+      color: #ccc;
+    }
+    &.hover > i.fa {
+      color: #666666;
+    }
+    &.selected > i.fa {
+      color: $primaryColor;
+    }
+  }
+}
+
+.card img {
+  transition: $basicTransition;
+}
